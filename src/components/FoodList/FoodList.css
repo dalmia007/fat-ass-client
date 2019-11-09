@@ -1,0 +1,6 @@
+.list{
+  scroll-behavior: smooth;
+  overflow: scroll;
+  margin-top: 10vh;
+  height:80vh;
+}

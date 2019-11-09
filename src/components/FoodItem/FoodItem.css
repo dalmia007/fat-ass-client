@@ -1,0 +1,47 @@
+.card{
+  display:flex;
+  margin: 12px;
+  width:90vw;
+  align-content: center;
+}
+
+.details{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height:100%;
+  padding:16px !important; 
+}
+
+
+.details-top{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height:50%;
+  justify-content: space-between;
+}
+
+.details-bottom{
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  height:50%;
+  justify-content: space-between;
+}
+
+.name-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.cal-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.ingredient-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+}

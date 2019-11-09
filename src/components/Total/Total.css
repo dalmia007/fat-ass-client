@@ -1,0 +1,18 @@
+.total{
+  height:10vh;
+}
+
+.Drawer-Container {
+  height: 50vh;
+  width: 100vw;
+  background-color: orange;
+  opacity: 0.80;
+  transform: translateY(0);
+  transition: transform 0.5s ease;
+  position:relative;
+  border-radius: 3.5%;
+  
+}
+.Drawer-Container-isOpen {
+  transform: translateY(-70%);
+}
