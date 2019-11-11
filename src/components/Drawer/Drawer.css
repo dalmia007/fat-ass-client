@@ -1,12 +1,12 @@
 .total{
-  height:10vh;
+  height:10%;
 }
 
 .Drawer-Container {
   height: 50vh;
-  width: 100vw;
+  width: 95vw;
   background-color: orange;
-  opacity: 0.80;
+  opacity: 0.83;
   transform: translateY(0);
   transition: transform 0.5s ease;
   position:relative;
@@ -15,4 +15,8 @@
 }
 .Drawer-Container-isOpen {
   transform: translateY(-70%);
+}
+
+.emoji{
+  width:100%;
 }

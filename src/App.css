@@ -1,5 +1,5 @@
 *{
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   margin: 0;
   padding:0;
 }
@@ -20,8 +20,9 @@ button,input{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height:100vh;
   overflow: hidden;
+  height:100vh;
 }
 
 

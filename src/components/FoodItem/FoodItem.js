@@ -1,7 +1,6 @@
 import React from 'react';
 import './FoodItem.css';
 import Card from '@material-ui/core/Card';
-// import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
@@ -10,7 +9,6 @@ import { ReactComponent as Carb } from '../../assests/images/carb.svg';
 import { ReactComponent as Fat } from '../../assests/images/fat.svg';
 import { ReactComponent as Pro } from '../../assests/images/pro.svg';
 import { ReactComponent as Cal } from '../../assests/images/cal.svg';
-// import Cal from '../../assests/images/cal.svg';
 import { Box } from '@material-ui/core';
 
 

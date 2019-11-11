@@ -1,8 +1,7 @@
 .appbar{
-  background-color:inherit !important;
-  position: fixed !important;
-  height: 10vh;
+  background-color:white !important;
+  position: absolute;
+  height: 10%;
   display: flex;
   justify-content: center;
-  align-items: center;
 }

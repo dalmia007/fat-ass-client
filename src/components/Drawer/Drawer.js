@@ -1,10 +1,10 @@
 import React,{useState} from 'react';
-import './Total.css';
+import './Drawer.css';
 
 
 const DrawerContents = ({toggleDrawer}) => (
   <div className="DrawerContents__Container">
-    <h1>Hello</h1>
+    <h1>Total Calories</h1>
   </div>
 );
 
@@ -20,7 +20,7 @@ export default function Total() {
     <div className='total'> 
     <div className="App__Container">
     <div className={`Drawer-Container ${isOpen && "Drawer-Container-isOpen"}`}>
-    <button onClick={toggleDrawer}>Toggle Drawer</button>
+    <button onClick={toggleDrawer} className='emoji'><span role='img' aria-label="sheep"  > ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ </span></button>
     <DrawerContents />
   </div>
     </div>

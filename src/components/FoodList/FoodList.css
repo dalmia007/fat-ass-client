@@ -1,6 +1,9 @@
 .list{
   scroll-behavior: smooth;
   overflow: scroll;
-  margin-top: 10vh;
-  height:80vh;
+  margin-top:10vh;
+  height:80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
