@@ -40,3 +40,21 @@ button,input{
   -webkit-border-radius: 50px;
   border-radius: 50px;
 }
+
+i {
+  font-size: 300%;
+  display: inline-block;
+  animation: spin 1s infinite ease;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes twist-up {
+  to {
+    transform: rotateX(360deg);
+  }
+}

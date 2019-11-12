@@ -6,6 +6,8 @@ import Drawer from './components/Drawer/Drawer';
 import { CircularProgress } from '@material-ui/core';
 
 
+
+
 function App() {
   // const [cal, setCal] = useState('');
   // const [carb, setCarb] = useState('');
@@ -15,11 +17,14 @@ function App() {
   const [total, setTotal] = useState({ cal: 0, carb: 0, fat: 0, pro: 0 });
   const [ loading,setLoading] = useState(false);
 
+  const AppId = process.env.REACT_APP_APP_ID;
+  const ApiKey = process.env.REACT_APP_API_KEY;
+
   
 
   async function startsearch(search) {
     setLoading(true);
-    const response = await fetch(`https://api.edamam.com/api/food-database/parser?ingr=${search}&app_id=4d127922&app_key=0d07a6a8588557d7032106d19a8b9190`);
+    const response = await fetch(`https://api.edamam.com/api/food-database/parser?ingr=${search}&app_id=${AppId}&app_key=${ApiKey}`);
     let initial = await response.json();
     // console.log(initial.parsed[0]);
     let quantity = initial.parsed[0].quantity;
@@ -79,7 +84,8 @@ function App() {
     <div className="App">
       <SearchBar startsearch={startsearch} />
       <FoodList foodList={foodList} loading={loading} />
-      <div className='overlay'>{loading && <CircularProgress className='spinner' />} </div>
+      {/* <div className='overlay'>{loading && <CircularProgress className='spinner' />} </div> */}
+      <div className='overlay'>{loading && <i>🍑</i>} </div>
       <Drawer foodList={foodList} total={total} />
     </div>
   );
