@@ -3,7 +3,7 @@
 }
 
 .Drawer-Container {
-  height: 50vh;
+  height: 70vh;
   width: 95vw;
   background-color: rgba(255, 166, 0, 0.863);
   transform: translateY(0);
@@ -14,7 +14,7 @@
 
 .Drawer-Container-isOpen {
   transform: translateY(-70%);
-  backdrop-filter: blur(2px);
+  /* backdrop-filter: blur(2px); */
   background-color: rgba(255, 166, 0, 0.863);
   
 }
@@ -24,6 +24,12 @@
 }
 
 .content{
-  opacity:1 !important;
+  /* opacity:1 !important; */
+  margin: 0 auto;
 }
 
+.chart {
+  margin:0 auto;
+  height:100%;
+  width:100%;
+}

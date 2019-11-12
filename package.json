@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.6.0",
     "@material-ui/icons": "^4.5.1",
+    "@nivo/pie": "^0.59.1",
     "chart.js": "^2.9.2",
     "dotenv": "^8.2.0",
     "react": "^16.11.0",
