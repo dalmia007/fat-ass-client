@@ -5,18 +5,25 @@
 .Drawer-Container {
   height: 50vh;
   width: 95vw;
-  background-color: orange;
-  opacity: 0.83;
+  background-color: rgba(255, 166, 0, 0.863);
   transform: translateY(0);
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease-in-out;
   position:relative;
-  border-radius: 3.5%;
-  
+  border-radius: 1.5rem;
 }
+
 .Drawer-Container-isOpen {
   transform: translateY(-70%);
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 166, 0, 0.863);
+  
 }
 
 .emoji{
   width:100%;
 }
+
+.content{
+  opacity:1 !important;
+}
+

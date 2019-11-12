@@ -6,6 +6,8 @@ import Button from '@material-ui/core/Button';
 import AppBar from '@material-ui/core/AppBar';
 
 
+
+
 export default function Searchbar({startsearch}) {
   const [search, setSearch] = useState('');
 
@@ -16,16 +18,24 @@ export default function Searchbar({startsearch}) {
   
 
   const handleSubmit = async (event) => {
-     event.preventDefault();
+    event.preventDefault();
     startsearch(search);
     setSearch('');
-
   }
+
+
+  // // const LoadingSpinner = <CircularProgress />;
+  // const LoadingSpinner = ({loading}) => {
+  //   if (loading) return <CircularProgress/>
+    
+  // }
+
+
 
   return (
     <AppBar className='appbar' elevation={0}>
       <form onSubmit = {handleSubmit}>
-        <TextField placeholder="What did you eat?" type="search" onChange={handleSearch} value={search}/>
+        <TextField placeholder="What did you eat?" type="search" onChange={handleSearch} value={search} />
         <Button type="submit"> 
           <AddIcon/>
         </Button>

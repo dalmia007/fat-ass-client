@@ -2,7 +2,8 @@ import React,{useState} from 'react';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import FoodList from './components/FoodList/FoodList';
-import Drawer from './components/Drawer/Drawer'
+import Drawer from './components/Drawer/Drawer';
+import { CircularProgress } from '@material-ui/core';
 
 
 function App() {
@@ -11,13 +12,16 @@ function App() {
   // const [pro, setPro] = useState('');
   // const [fat, setFat] = useState('');
   const [foodList, setFoodList] = useState([]);
+  const [total, setTotal] = useState({ cal: 0, carb: 0, fat: 0, pro: 0 });
+  const [ loading,setLoading] = useState(false);
 
   
 
   async function startsearch(search) {
+    setLoading(true);
     const response = await fetch(`https://api.edamam.com/api/food-database/parser?ingr=${search}&app_id=4d127922&app_key=0d07a6a8588557d7032106d19a8b9190`);
     let initial = await response.json();
-    console.log(initial.parsed[0]);
+    // console.log(initial.parsed[0]);
     let quantity = initial.parsed[0].quantity;
     let foodId = initial.parsed[0].food.foodId;
     let measureURI = initial.parsed[0].measure.uri;
@@ -45,16 +49,38 @@ function App() {
       pro: nutrients.totalNutrients.PROCNT.quantity,
       fat: nutrients.totalNutrients.FAT.quantity
     } 
-  
-    setFoodList(food => [...food, item]);
-  };
+    
+    setLoading(false)
+    setFoodList(food => [...food, item])
+    setTotal(total => ({
+      cal: (total.cal + item.cal),
+      carb: (total.carb + item.carb),
+      pro: total.pro + item.pro,
+      fat: total.fat + item.fat
+    }));
 
+
+    // console.log(total)
+  };
   
+  // const getTotal = () => {
+  //   const total = foodList.reduce((acc, item)=> {
+  //     return {
+  //       cal: acc.cal + item.cal,
+  //       carb: acc.carb + item.carb,
+  //     }
+  //   },
+  //     { cal: 0, carb: 0 });
+  //   return total;
+  // };
+
+  // console.log(total)
   return (
     <div className="App">
-      <SearchBar startsearch={startsearch}/>
-      <FoodList foodList={foodList}  />
-      <Drawer foodList={foodList}/>
+      <SearchBar startsearch={startsearch} />
+      <FoodList foodList={foodList} loading={loading} />
+      <div className='overlay'>{loading && <CircularProgress className='spinner' />} </div>
+      <Drawer foodList={foodList} total={total} />
     </div>
   );
 }

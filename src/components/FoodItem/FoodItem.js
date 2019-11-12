@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{} from 'react';
 import './FoodItem.css';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -13,12 +13,10 @@ import { Box } from '@material-ui/core';
 
 
 
-export default function FoodItem({ food }) {
-
-  // console.log(food);
+export default function FoodItem({ food}) {
+ 
   return (
-
-
+ 
       <Card className='card'>
       <CardContent className='details'>
           <Typography className='details-top' component={'span'}>
