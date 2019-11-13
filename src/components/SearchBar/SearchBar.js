@@ -24,18 +24,11 @@ export default function Searchbar({startsearch}) {
   }
 
 
-  // // const LoadingSpinner = <CircularProgress />;
-  // const LoadingSpinner = ({loading}) => {
-  //   if (loading) return <CircularProgress/>
-    
-  // }
-
-
-
   return (
     <AppBar className='appbar' elevation={0}>
-      <form onSubmit = {handleSubmit}>
-        <TextField placeholder="What did you eat?" type="search" onChange={handleSearch} value={search} />
+      <form onSubmit = {handleSubmit} className = 'form'>
+        <TextField placeholder="What did you eat?" type="search" onChange={handleSearch} value={search}  inputProps={{
+        style: { textAlign: "center", textTransform: "uppercase"}}} margin='dense' color='secondary'/>
         <Button type="submit"> 
           <AddIcon/>
         </Button>

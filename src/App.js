@@ -15,12 +15,14 @@ function App() {
   // const [fat, setFat] = useState('');
   const [foodList, setFoodList] = useState([]);
   const [total, setTotal] = useState({ cal: 0, carb: 0, fat: 0, pro: 0 });
-  const [ loading,setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [slash, setSlash] = useState(true);
 
   const AppId = process.env.REACT_APP_APP_ID;
   const ApiKey = process.env.REACT_APP_API_KEY;
 
-  
+  setTimeout(() => setSlash(false)
+    , 1250);
 
   async function startsearch(search) {
     setLoading(true);
@@ -48,7 +50,7 @@ function App() {
     // setFat(nutrients.totalNutrients.FAT.quantity); 
     const item = {
       id: Date.now() + '&' + foodId,
-      name: search,
+      name: search.toUpperCase(),
       cal: nutrients.calories,
       carb: nutrients.totalNutrients.CHOCDF.quantity,
       pro: nutrients.totalNutrients.PROCNT.quantity,
@@ -81,12 +83,18 @@ function App() {
 
   // console.log(total)
   return (
-    <div className="App">
-      <SearchBar startsearch={startsearch} />
-      <FoodList foodList={foodList} loading={loading} />
-      {/* <div className='overlay'>{loading && <CircularProgress className='spinner' />} </div> */}
-      <div className='overlay'>{loading && <i>🍑</i>} </div>
-      <Drawer foodList={foodList} total={total} />
+    <div>
+      {
+        slash 
+        ? <div className='splashscreen'><img src={require('./assests/images/default.png')} className="splash" ></img></div>
+        : <div className="App">
+          <SearchBar startsearch={startsearch} />
+          <FoodList foodList={foodList} loading={loading} />
+          {/* <div className='overlay'>{loading && <CircularProgress className='spinner' />} </div> */}
+          <div className='overlay'>{loading && <i>🍑</i>} </div>
+          <Drawer foodList={foodList} total={total} />
+        </div>
+      }
     </div>
   );
 }

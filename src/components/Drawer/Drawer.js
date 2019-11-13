@@ -26,7 +26,7 @@ const MyResponsivePie = ({ total}) => (
       startAngle={-162}
       innerRadius={0.5}
       padAngle={0.7}
-      cornerRadius={3}
+      cornerRadius={4}
       colors={{ scheme: 'nivo' }}
       borderWidth={1}
       borderColor="none"
@@ -72,7 +72,7 @@ const MyResponsivePie = ({ total}) => (
 
 const DrawerContents = ({total }) => (
   <div className="DrawerContents__Container">
-    <h2>Total Calories : {total.cal}</h2>
+    <h2 className='total-head'>Total Calories : {total.cal}</h2>
     <br />
     <br/>
     {/* <div className='content'>
@@ -88,10 +88,6 @@ const DrawerContents = ({total }) => (
 export default function Total({ total }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleDrawer = () => setIsOpen(!isOpen);
-  
- //💪🌾🍟
-  
- 
 
   return (
   <div className='total'> 
