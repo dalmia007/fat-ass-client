@@ -14,7 +14,7 @@
 
 .Drawer-Container-isOpen {
   transform: translateY(-75.0%);
-  /* backdrop-filter: blur(2px); */
+  backdrop-filter: blur(2px);
   background-color: rgba(255, 166, 0, 0.863);
   
 }
@@ -37,6 +37,7 @@
 .total-head{
   color:black;
   font-family: 'Roboto', sans-serif;
+  font-weight: bold;
   
 
 }

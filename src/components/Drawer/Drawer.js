@@ -49,11 +49,11 @@ const MyResponsivePie = ({ total}) => (
               anchor: 'top',
               direction: 'row',
               translateY: -30,
-              translateX:25,
+              translateX:5,
               itemWidth: 100,
-              itemHeight: 25,
+              itemHeight: 30,
               itemTextColor: '#000',
-              symbolSize: 25,
+              symbolSize: 30,
               symbolShape: 'circle',
               effects: [
                   {

@@ -33,6 +33,7 @@
 .name-container {
   display: flex;
   flex-direction: row;
+  font-weight: bold;
 }
 
 .cal-container {

@@ -20,7 +20,7 @@ export default function FoodItem({ food}) {
       <Card className='card'>
       <CardContent className='details'>
           <Typography className='details-top' component={'span'}>
-              <Box className='name-container'fontWeight='fontWeightBold' textAlign='left'>{food.name}</Box>
+              <Box className='name-container' textAlign='left'>{food.name}</Box>
               <Box className='cal-container' textAlign='right' ><SvgIcon><Cal /></SvgIcon>{food.cal}cal</Box>
           </Typography>
           <Typography className='details-bottom'component={'span'}>
