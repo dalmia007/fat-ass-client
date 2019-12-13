@@ -1,68 +1,65 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img src="images/logo-readme-2.png" />
+</p>
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+Nutri Fit is a nutrition tracking app that helps users calculate the amount of macros and calories from the food consumed.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Screenshots
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<p align="center">
+  <img src="images/screenshot-readme-2.png" />
+</p>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Getting started
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repo
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```
+https://github.com/dalmia007/nutri-fit-client.git
+cd client
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies
+```
+npm install
+```
 
-### `npm run eject`
+3. Go to (https://developer.edamam.com/food-database-api) and create an account of your choice to obtain the APP_KEY and APP_ID.After that create a .env file in the root folder and paste the keys in the following format:
+```
+REACT_APP_API_KEY = Your App Key
+REACT_APP_APP_ID = Your App ID
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Start development server
+```
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Built with
 
-## Learn More
+* [React](https://reactjs.org) - Front end library for building user interfaces
+* [https://material-ui.com](https://reactnavigation.org) - React components for faster and easier web development.
+* Love, lots of love ♥
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
 
-### Code Splitting
+Improvements are welcome :)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Fork the repo and do your thing. Push to your fork and submit a pull request.
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Author
 
-### Making a Progressive Web App
+Anurag Dalmia - [Github](https://github.com/dalmia007) - [LinkedIn](https://www.linkedin.com/in/anurag-dalmia/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
+## License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project is licensed under the MIT License.
