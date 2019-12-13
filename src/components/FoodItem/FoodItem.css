@@ -5,6 +5,10 @@
   align-content: center;
 }
 
+/* .card:hover{
+  background-color: rgba(226, 230, 36, 0.836);
+} */
+
 .details{
   display: flex;
   flex-direction: column;
@@ -36,13 +40,13 @@
   font-weight: bold;
 }
 
-.cal-container {
-  display: flex;
-  flex-direction: row;
-}
 
 .ingredient-container {
   display: flex;
   flex-direction: row;
-  margin-top: 5%;
+  margin-top: 3%;
+}
+
+.delete{
+  justify-self: flex-end;
 }

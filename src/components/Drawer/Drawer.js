@@ -4,19 +4,19 @@ import { ResponsivePie } from '@nivo/pie'
 
 const MyResponsivePie = ({ total}) => (
   <ResponsivePie
-    data={[{ "id": "Carbs(g)",
+    data={[{ "id": "Carbs (g)",
     "label": "Carbohydrate",
     "value": Number(total.carb.toFixed(1)),
       "color": "hsl(10, 70%, 50%)"
     },
       {
-        "id": "Fat(g)",
+        "id": "Fat (g)",
     "label": "Fat",
     "value": Number(total.fat.toFixed(1)),
         "color": "hsl(206, 70%, 50%)"
       },
       {
-        "id": "Protein(g)",
+        "id": "Protein (g)",
     "label": "Protein ",
     "value": Number(total.pro.toFixed(1)),
         "color": "hsl(206, 70%, 50%)"
@@ -75,11 +75,6 @@ const DrawerContents = ({total }) => (
     <h2 className='total-head'>Total Calories : {total.cal}</h2>
     <br />
     <br/>
-    {/* <div className='content'>
-      <h4>Total Carbs: {(total.carb).toFixed(2) + 'g'}</h4>
-      <h4>Total Carbs: {(total.fat).toFixed(2) + 'g'}</h4>
-      <h4>Total Carbs: {(total.pro).toFixed(2) + 'g'}</h4>
-    </div> */}
   </div>
 );
 

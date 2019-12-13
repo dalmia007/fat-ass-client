@@ -1,23 +1,4 @@
-.list{
-  scroll-behavior: smooth;
-  overflow: scroll;
-  margin-top:10vh;
-  height:80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.list-group-item {
-  position: relative;
-  display: block;
-  padding: 10px 15px;
-  margin-bottom: -1px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-}
-
+/* Required styles */
 .swipe-to-delete {
   position: relative !important;
   padding: 0 !important;
@@ -28,10 +9,10 @@
     right: 0 !important;
     bottom: 0 !important;
     left: 0 !important;
-    z-index: -1 !important; }
+    z-index: 1 !important; }
   .swipe-to-delete .js-content {
     position: relative !important;
-    z-index: 0 !important;
+    z-index: 2 !important;
     -webkit-user-select: none !important;
     -moz-user-select: none !important;
     -ms-user-select: none !important; }
@@ -49,8 +30,6 @@
 
 /* Custom styles */
 .swipe-to-delete .js-delete {
-  margin:12px;
-  border-radius: .25em;
   background: #ff5f58; }
   .swipe-to-delete .js-delete svg {
     position: absolute;
@@ -70,3 +49,5 @@
   transition-duration: .7s;
   transition-timing-function: ease-in-out; }
 
+
+/*# sourceMappingURL=swipe-to-delete.css.map*/

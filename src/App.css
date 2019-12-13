@@ -30,6 +30,7 @@ button,input{
   margin-top: -50px;
 
 }
+
 .spinner{
   backdrop-filter: opacity(0.7);
   background-color:rgba(214, 138, 39, 0.445);
@@ -68,7 +69,9 @@ i {
 
 .splashscreen{
   display: flex;
-  height:100vh;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height:100vh;
   background-color:#FBF3F0 ;
 }

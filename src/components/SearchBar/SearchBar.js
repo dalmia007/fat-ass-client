@@ -8,19 +8,23 @@ import AppBar from '@material-ui/core/AppBar';
 
 
 
+
 export default function Searchbar({startsearch}) {
   const [search, setSearch] = useState('');
 
   const handleSearch = ({ target }) => {
     setSearch(target.value);
   }
-  // console.log(search);
   
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    startsearch(search);
-    setSearch('');
+    if (search === ''){
+      alert('PLEASE ENTER A FOOD ITEM')
+    } else {
+      startsearch(search);
+      setSearch('');
+    }
   }
 
 

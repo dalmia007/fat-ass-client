@@ -10,26 +10,27 @@ import { ReactComponent as Fat } from '../../assests/images/fat.svg';
 import { ReactComponent as Pro } from '../../assests/images/pro.svg';
 import { ReactComponent as Cal } from '../../assests/images/cal.svg';
 import { Box } from '@material-ui/core';
+import DeleteIcon from '@material-ui/icons/DeleteForeverOutlined';
 
 
-
-export default function FoodItem({ food}) {
+export default function FoodItem({food, onDelete}) {
  
   return (
- 
       <Card className='card'>
-      <CardContent className='details'>
-          <Typography className='details-top' component={'span'}>
+        <CardContent className='details'>
+          <Typography className='details-top' component={'div'}>
               <Box className='name-container' textAlign='left'>{food.name}</Box>
-              <Box className='cal-container' textAlign='right' ><SvgIcon><Cal /></SvgIcon>{food.cal}cal</Box>
+              <button type="button"> 
+            <DeleteIcon className='delete' fontSize="small" onClick={onDelete}/>
+              </button>
           </Typography>
-          <Typography className='details-bottom'component={'span'}>
-              <Box className='ingredient-container' ><SvgIcon><Carb/></SvgIcon>{food.carb.toFixed(2)}g</Box>
-              <Box className='ingredient-container'><SvgIcon><Fat/></SvgIcon>{food.fat.toFixed(2)}g</Box>
-              <Box className='ingredient-container'><SvgIcon><Pro /></SvgIcon>{food.pro.toFixed(2)}g</Box>
+          <Typography className='details-bottom' component={'span'}>
+              <Box className='ingredient-container' ><SvgIcon><Cal /></SvgIcon>&nbsp;{food.cal}cal</Box>
+              <Box className='ingredient-container' ><SvgIcon><Carb/></SvgIcon>&nbsp;{food.carb.toFixed(0)}g</Box>
+              <Box className='ingredient-container'><SvgIcon><Fat/></SvgIcon>&nbsp;{food.fat.toFixed(0)}g</Box>
+              <Box className='ingredient-container'><SvgIcon><Pro /></SvgIcon>&nbsp;{food.pro.toFixed(0)}g</Box>
           </Typography>
         </CardContent>
       </Card>
-  
   )
 }
