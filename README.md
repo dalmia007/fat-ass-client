@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/logo-readme-2.png" />
+  <img src="src/images/cover.png" />
 </p>
 
 
@@ -9,7 +9,7 @@ Nutri Fit is a nutrition tracking app that helps users calculate the amount of m
 ## Screenshots
 
 <p align="center">
-  <img src="images/screenshot-readme-2.png" />
+  <img src="src/images/app.png" />
 </p>
 
 
