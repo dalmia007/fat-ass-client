@@ -44,7 +44,7 @@ npm start
 ## Built with
 
 * [React](https://reactjs.org) - Front end library for building user interfaces
-* [https://material-ui.com](https://reactnavigation.org) - React components for faster and easier web development.
+* [Material UI](https://material-ui.com) - React components for faster and easier web development.
 * Love, lots of love ♥
 
 
